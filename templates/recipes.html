@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+		{% for recipe in recipes %}
+<!DOCTYPE html>
+<html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Email</title>
+	</head>
+<body>
+
+<div class="container-fluid">
+  <!-- List all the recipes that have been 'passed in' to this template's context.
+    Also show a button ,to add a new recipe, in an appropriate part of the page. -->
+	<ul class="list-group">
+		<!--- ASk Yair if this can be done more efficiently--->
+		<li class="list-group-item"> Dish: {{ recipe[2] }} <a href="{{url_for('show_recipe', recipe_id = recipe.0)}}" class="btn btn-warning"> Open </a> </li>
+		<img class="recipe-image" src="{{ recipe[4] }}">
+	</ul>
+</div>
+<div>
+	<a href="{{url_for('add_recipe', recipe_id = recipe.0)}}" class="btn btn-danger"><h6>Still hungry? Try adding a NEW recipe!</h6></a>
+</body>
+</html>
+
+{% endfor %}
+
+{% endblock %} 
+
+<!-- learn how to convert tuples from your data base  into dictionaries :)

@@ -1,0 +1,14 @@
+.svg-icon {
+	margin: 0 4px 8px 0;
+}
+
+.recipe-image {
+	height: 320px;
+	width: 320px;
+}
+
+.ingredients-text {
+	white-space: pre-wrap;
+	margin-left: 3%;
+	color: gold;
+}

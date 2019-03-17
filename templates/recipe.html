@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+	<h1> This is an amazing recipe!</h1>
+	    <div class="row">
+        <div class="col-6">
+          <div class="card mt-3">
+            <img class="recipe-image" src="{{ recipe[4] }}">
+            <div class="card-body">
+              <h5 class="card-title"> {{ recipe[2] }} </h5>
+              <h5 class="card-title"> {{ recipe[3] }}</h5>
+<!---- Later on change show cart to add to cart ---->
+              <p> plug </p>
+            </div>
+          </div>
+        </div>
+  <!-- Display information about the given recipe. Be sure to show its image, also. -->
+</div>
+
+  {% endblock %}

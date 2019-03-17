@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<!doctype html>
+<html lang="en">
+  <head>
+  		<title>Make a recipe!</title>
+</head>
+<body>
+<div class="container">
+	<h1>Add New Recipe</h1>
+	<form method="post" action="{{ url_for('add_recipe')}}">
+	<!-- Add a form to allow the user to input data for a new recipe which is to be added to the database. -->
+</div>
+
+<div>
+	<input type="text" name="recipe" placeholder="Type your recipe's name here">
+</div>
+<div>
+	<input type="text" name="ingredients" placeholder="Type your recipe's ingrediants here">
+</div>
+<!--Plug this in later
+<div>
+	<input type="text" name="instructions" placeholder="Type your recipe's instructions here">
+</div>
+---->
+<div>
+	<input type="text" name="pic" placeholder="Link a picture here">
+</div>
+<input type="submit" class="btn btn-danger" value="Add recipe!">
+<body>
+{% endblock %}
